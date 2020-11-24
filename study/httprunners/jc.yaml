@@ -1,0 +1,17 @@
+config:
+  name: "jc"
+  base_url: http://127.0.0.1:5000
+
+teststeps:
+  - name: haha
+    request:
+      url: /haha
+      method: GET
+
+    validate:
+      - eq: [body.name,"jc"]
+      - eq: [body.age,99]
+      - eq: [body.addr,"hangzhou"]
+
+
+

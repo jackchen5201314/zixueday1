@@ -1,0 +1,30 @@
+config:
+  name: "jiekouceshi"
+  base_url: http://127.0.0.1:5000
+
+teststeps:
+  - name: "测试login接口1"
+    request:
+      url: /login
+      method: GET
+      params:
+        name: "jiangchen"
+        pwd: "123456"
+    validate:
+      - eq: ["status_code",200]
+
+      - eq: [body.name,"jiangchen"]
+      - eq: [body.pwd,"123456"]
+
+  - name: "test233433"
+    request:
+      url: /login
+      method: GET
+      params:
+        name: "jiangchen"
+        pwd: "123"
+    validate:
+      - eq: ["status_code",200]
+      - eq: [body.name,"jiangchen"]
+      - eq: [body.pwd,"123"]
+

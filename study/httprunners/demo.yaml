@@ -1,0 +1,19 @@
+#https://www.cnblogs.com/yoyoketang/p/11565908.html 引用变量
+#做一个实例 get post  如何设置变量 如何断言 如何输出报告 如何把上一个接口的结果传给下一个接口
+#https://www.cnblogs.com/XhyTechnologyShare/p/12053060.html
+config:
+  name: basic test with httpbin
+  base_url: https://www.free-api.com
+  variables:
+    urltaskanme: urltask
+
+
+teststeps:
+  - name: headers
+    request:
+      url: /$urltaskanme
+      method: POST
+    validate:
+      - eq: ["status_code", 419]
+      - eq: [headers.expires, "-1"]
+#        - eq: [body.header.hosts, "-1"]
