@@ -1,0 +1,103 @@
+2020-11-23 21:28:55.262 | INFO     | httprunner.runner:test_start:450 - Start to run testcase: jiekouceshi, TestCase ID: dafc813c-8436-4021-ae33-7a2cfc03b96c
+2020-11-23 21:28:55.262 | INFO     | httprunner.runner:__run_step:292 - run step begin: 测试login接口1 >>>>>>
+2020-11-23 21:28:55.278 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2020-11-23 21:28:55.278 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2020-11-23 21:28:55.278 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://127.0.0.1:5000/login?name=jiangchen&pwd=123456
+headers  : {
+    "User-Agent": "python-requests/2.25.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-dafc813c-8436-4021-ae33-7a2cfc03b96c-135262"
+}
+cookies  : {}
+body     : None
+
+2020-11-23 21:28:55.278 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "Content-Length": "46",
+    "Server": "Werkzeug/1.0.1 Python/3.8.0",
+    "Date": "Mon, 23 Nov 2020 13:28:55 GMT"
+}
+cookies  : {}
+encoding : None
+content_type : application/json
+body     : {
+    "name": "jiangchen",
+    "pwd": "123456"
+}
+
+2020-11-23 21:28:55.278 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 15.6 ms, response_length: 0 bytes
+2020-11-23 21:28:55.278 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-11-23 21:28:55.278 | INFO     | httprunner.response:validate:246 - assert body.name equal jiangchen(str)	==> pass
+2020-11-23 21:28:55.278 | INFO     | httprunner.response:validate:246 - assert body.pwd equal 123456(str)	==> pass
+2020-11-23 21:28:55.278 | INFO     | httprunner.runner:__run_step:304 - run step end: 测试login接口1 <<<<<<
+
+2020-11-23 21:28:55.278 | INFO     | httprunner.runner:__run_step:292 - run step begin: test233433 >>>>>>
+2020-11-23 21:28:55.294 | WARNING  | httprunner.client:request:188 - failed to get client address info: 'NoneType' object has no attribute 'getsockname'
+2020-11-23 21:28:55.294 | WARNING  | httprunner.client:request:196 - failed to get server address info: 'NoneType' object has no attribute 'getpeername'
+2020-11-23 21:28:55.294 | DEBUG    | httprunner.client:log_print:40 - 
+================== request details ==================
+method   : GET
+url      : http://127.0.0.1:5000/login?name=jiangchen&pwd=123
+headers  : {
+    "User-Agent": "python-requests/2.25.0",
+    "Accept-Encoding": "gzip, deflate",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "HRUN-Request-ID": "HRUN-dafc813c-8436-4021-ae33-7a2cfc03b96c-135278"
+}
+cookies  : {}
+body     : None
+
+2020-11-23 21:28:55.294 | DEBUG    | httprunner.client:log_print:40 - 
+================== response details ==================
+status_code : 200
+headers  : {
+    "Content-Type": "application/json",
+    "Content-Length": "46",
+    "Server": "Werkzeug/1.0.1 Python/3.8.0",
+    "Date": "Mon, 23 Nov 2020 13:28:55 GMT"
+}
+cookies  : {}
+encoding : None
+content_type : application/json
+body     : {
+    "name": "jiangchen",
+    "pwd": "123456"
+}
+
+2020-11-23 21:28:55.294 | INFO     | httprunner.client:request:217 - status_code: 200, response_time(ms): 15.6 ms, response_length: 0 bytes
+2020-11-23 21:28:55.294 | INFO     | httprunner.response:validate:246 - assert status_code equal 200(int)	==> pass
+2020-11-23 21:28:55.294 | INFO     | httprunner.response:validate:246 - assert body.name equal jiangchen(str)	==> pass
+2020-11-23 21:28:55.294 | ERROR    | httprunner.response:validate:263 - assert body.pwd equal 123(str)	==> fail
+check_item: body.pwd
+check_value: 123456(str)
+assert_method: equal
+expect_value: 123(str)
+2020-11-23 21:28:55.294 | ERROR    | httprunner.runner:log_req_resp_details:194 - 
+******************************** DETAILED REQUEST & RESPONSE ********************************
+====== request details ======
+url: http://127.0.0.1:5000/login
+method: GET
+headers: {'HRUN-Request-ID': 'HRUN-dafc813c-8436-4021-ae33-7a2cfc03b96c-135278'}
+params: {'name': 'jiangchen', 'pwd': '123'}
+data: None
+cookies: {}
+timeout: 120
+allow_redirects: True
+verify: False
+json: None
+
+====== response details ======
+status_code: 200
+headers: {'Content-Type': 'application/json', 'Content-Length': '46', 'Server': 'Werkzeug/1.0.1 Python/3.8.0', 'Date': 'Mon, 23 Nov 2020 13:28:55 GMT'}
+body: '{\n  "name": "jiangchen", \n  "pwd": "123456"\n}\n'
+
+2020-11-23 21:28:55.294 | INFO     | httprunner.runner:test_start:460 - generate testcase log: C:\Users\Administrator\logs\dafc813c-8436-4021-ae33-7a2cfc03b96c.run.log
